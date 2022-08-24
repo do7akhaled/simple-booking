@@ -1,7 +1,5 @@
 # Simple Booking
 
-## About
-
 this project an api project just for booking a room in certain date, that's simple
 
 ## Prerequisite
@@ -28,7 +26,7 @@ git clone https://github.com/do7akhaled/simple-booking.git
 composer install
 ```
 
-5 - copy env.example then rename it to just .env 
+5 - copy ***env.example*** then rename it to just ***.env***
 
 6 - create a database in your mysql server then update the database name in .env
 
@@ -65,6 +63,9 @@ this endpint to show available rooms it accepts 4 paramters:
 - **end**   : the end date to filter result [format= "Y-m-d"] (optional, default is today)
 - **take**  : to limit the result (optional, default = 1000)
 - **skip**  : to skip some record from the result depending on it's order (optional, default = 0)
+
+
+
 
 
 >**POST :** api/book-room
