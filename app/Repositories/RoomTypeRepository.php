@@ -4,6 +4,9 @@ namespace App\Repositories;
 
 use App\Models\RoomType;
 
+/**
+ * @method get()
+ */
 class RoomTypeRepository
 {
     private RoomType $model;
