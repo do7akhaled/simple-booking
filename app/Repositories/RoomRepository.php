@@ -3,9 +3,7 @@
 namespace App\Repositories;
 
 use App\Exceptions\RoomAlreadyBookedException;
-use App\Models\bookingReference;
 use App\Models\Room;
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 
