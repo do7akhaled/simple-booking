@@ -83,7 +83,7 @@ The [Postman_Collection](https://www.getpostman.com/collections/b6d27192aac73614
 
 - if you notice that all responses are automatically jsonify that's due to my middleware to jsonify all api responses
 
-- my controllers are single invokable function then I decided to use **__invoke** magic method to just simplify the heading of naming method brr-rrr :sweat_smile:
+- my controllers are single invokable function then I decided to use **__invoke** magic method to just simplify the headache of naming method brr-rrr :sweat_smile:
 
 - I tired to make exception in booking room to throw exception if room was booked, so I'm trying to mention it here to highlight that, cause ohh yeah I'm trying to show my muscles ooh, but who cares
   :pensive: :cry: , just kidding,  but really I think it's the most suitable situation I should use exceptions 
