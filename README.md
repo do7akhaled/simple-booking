@@ -5,12 +5,12 @@ this project an api project just for booking a room in certain date, that's simp
 ## Prerequisite
 
 - mysql server
-- git intalled
+- git installed
 - composer installed
 - php installed
 - postman for testing 
 
-## Instalation
+## Installation
 
 1 - open cmd and navigate to any directory you want to install project in 
 
@@ -20,7 +20,7 @@ git clone https://github.com/do7akhaled/simple-booking.git
 ```
 3 - cd simple-booking
 
-4 - install dependances
+4 - install dependencies
 
 ```
 composer install
@@ -57,7 +57,7 @@ I built this application with only two endpoints
 
 > **GET :** api/get-available-rooms
 
-this endpint to show available rooms it accepts 4 paramters:
+this endpoint to show available rooms it accepts 4 parameters:
 
 - **start** : the start date to filter result [format= "Y-m-d"] (optional, default is today)
 - **end**   : the end date to filter result [format= "Y-m-d"] (optional, default is today)
@@ -70,22 +70,23 @@ this endpint to show available rooms it accepts 4 paramters:
 
 >**POST :** api/book-room
 
-this endpoint to book a room, it accepts 3 paramters:
+this endpoint to book a room, it accepts 3 parameters:
 
 - **room_id** : the room_id we need to book
-- **from**    : date to start booking (don't wory there is a validation to validate that date is in the future)
+- **from**    : date to start booking (don't worry there is a validation to validate that date is in the future)
 - **to**      : date to end booking (there is also a validation to validate that the date after or equals to from date)
 
 
+The [Postman_Collection](https://www.getpostman.com/collections/b6d27192aac73614715c)
 
 ## NOTES
 
-- if you notices that all responses are automaticlly jsonified that's due to my middleware to jsonify all api responses
+- if you notice that all responses are automatically jsonify that's due to my middleware to jsonify all api responses
 
-- my controllers are single invokable function then i decided to use **__invoke** magic method to just simplify the heading of naming method brrrrr (shy emoji)
+- my controllers are single invokable function then I decided to use **__invoke** magic method to just simplify the heading of naming method brr-rrr :sweat_smile:
 
-- i tired to make exception in booking room to throw excpetion if room was booked, so i'm trying to menthion it here to highlight that, cause ohh yaah i'm trying show my muscles ooh, but who cares
-( sad emoji :(   ), just kidding but realy i think it's the most suitable situation i should use exceptions 
+- I tired to make exception in booking room to throw exception if room was booked, so I'm trying to mention it here to highlight that, cause ohh yeah I'm trying to show my muscles ooh, but who cares
+  :pensive: :cry: , just kidding,  but really I think it's the most suitable situation I should use exceptions 
 
 
 

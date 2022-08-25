@@ -24,6 +24,7 @@ class RoomRepository
     public function getAvailable($start, $end, $limit, $skip = 0): Collection|array
     {
         return $this->model
+            ->with('roomType')
             ->with('booking')
             ->whereDoesntHave('booking', function (Builder $builder) use ($start, $end) {
                 return $builder
