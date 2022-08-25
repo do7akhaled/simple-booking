@@ -32,7 +32,7 @@ class Room extends Model
     {
         return $this->whereHas('booking', function (Builder $builder) use ($start, $end) {
             return $builder->whereBetween('from', [$start, $end])
-                ->whereBetween('to', [$start, $end]);
+                ->OrWhereBetween('to', [$start, $end]);
         })->exists();
     }
 
