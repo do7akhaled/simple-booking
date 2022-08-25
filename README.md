@@ -1,6 +1,6 @@
 # Simple Booking
 
-this project an api project just for booking a room in certain date, that's simple
+this is an api project just for booking a room in certain date, that's simple
 
 ## Prerequisite
 
