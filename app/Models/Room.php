@@ -31,7 +31,7 @@ class Room extends Model
     public function isBooked($start, $end)
     {
         return $this->whereHas('booking', function (Builder $builder) use ($start, $end) {
-            return $builder->whereBetween('from', [$start, $end])
+            return $builder->where('room_id',this->id)->whereBetween('from', [$start, $end])
                 ->OrWhereBetween('to', [$start, $end]);
         })->exists();
     }
