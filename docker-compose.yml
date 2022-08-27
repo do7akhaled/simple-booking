@@ -27,8 +27,8 @@ services:
     ports:
       - "4306:3306"
     environment:
-      MYSQL_DATABASE: homestead
-      MYSQL_USER: homestead
+      MYSQL_DATABASE: simple_booking
+      MYSQL_USER: simple_booking_user
       MYSQL_PASSWORD: secret
       MYSQL_ROOT_PASSWORD: secret
       SERVICE_TAG: dev
@@ -53,6 +53,7 @@ services:
     container_name: composer
     depends_on:
       - php
+    working_dir: /var/www/html
     volumes:
       - ./:/var/www/html
     networks:
@@ -64,10 +65,10 @@ services:
       dockerfile: Dockerfile
     container_name: artisan
     volumes:
-        -  ./:/var/www/html
+        - ./:/var/www/html
+    depends_on:
+        - mysql
     working_dir: /var/www/html
     entrypoint: ['/var/www/html/artisan']
-    depends_on:
-      - php
     networks:
       - laravel
